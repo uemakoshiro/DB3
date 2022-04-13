@@ -1,16 +1,16 @@
---ï¿½ï¿½ï¿½Kï¿½ï¿½ï¿½-SQL1-ï¿½ï¿½{
+--‰‰K–â‘è-SQL1-Šî–{
 
---1.ï¿½fï¿½[ï¿½^ï¿½xï¿½[ï¿½Xï¿½ì¬
+--1.ƒf[ƒ^ƒx[ƒXì¬
 CREATE DATABASE db_exam;
 
 
---2.ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ì¬-ï¿½ï¿½ï¿½ï¿½1
+--2.ƒe[ƒuƒ‹ì¬-‚»‚Ì1
 create table major (
 major_id int primary key
 ,major_name varchar(50));
 
 
---3.ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ì¬-ï¿½ï¿½ï¿½ï¿½2
+--3.ƒe[ƒuƒ‹ì¬-‚»‚Ì2
 create table student (
 student_id int primary key
 ,student_name varchar(50)
@@ -19,32 +19,90 @@ student_id int primary key
 ,major_id int NOT NULL REFERENCES major(major_id));
 
 
---4."major"ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Öƒfï¿½[ï¿½^ï¿½oï¿½^
-insert into major values (1,'ï¿½pï¿½ï¿½ï¿½w'),(2,'ï¿½ï¿½ï¿½pï¿½ÈŠw')
-,(3,'ï¿½ï¿½ï¿½Hï¿½w'),(4,'ï¿½oï¿½ÏŠw'),(5,'ï¿½ï¿½ï¿½Û•ï¿½ï¿½ï¿½');
+--4."major"ƒe[ƒuƒ‹‚Öƒf[ƒ^“o˜^
+insert into major values (1,'‰p•¶Šw'),(2,'‰—p‰ÈŠw')
+,(3,'î•ñHŠw'),(4,'ŒoÏŠw'),(5,'‘Û•¶‰»');
 
 
---5."student"ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Öƒfï¿½[ï¿½^ï¿½oï¿½^
-insert into student values (1,'ï¿½Rï¿½c',1,'ï¿½{ï¿½ï¿½',1),(2,'ï¿½cï¿½ï¿½',1,'ï¿½ï¿½ï¿½ï¿½',2),(3,'ï¿½ï¿½ï¿½ï¿½',1,'ï¿½ï¿½ï¿½ï¿½',3),
-(4,'ï¿½ï¿½ï¿½',2,'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',1),(5,'ï¿½ï¿½ï¿½ï¿½',2,'ï¿½kï¿½Cï¿½ï¿½',2),(6,'ï¿½gï¿½c',2,'ï¿½ï¿½ï¿½ï¿½',1),(7,'ï¿½É“ï¿½',3,'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',2),
-(8,'ï¿½Rï¿½{',3,'ï¿½_ï¿½Şï¿½',3),(9,'ï¿½Xï¿½{',4,'ï¿½ï¿½ï¿½ï¿½',4),(10,'ï¿½gï¿½ï¿½',4,'ï¿½_ï¿½Şï¿½',5);
+--5."student"ƒe[ƒuƒ‹‚Öƒf[ƒ^“o˜^
+insert into student values (1,'R“c',1,'‹{é',1),(2,'“c’†',1,'“Œ‹',2),(3,'²“¡',1,'“Œ‹',3),
+(4,'—é–Ø',2,'­™“‡',1),(5,'‚‹´',2,'–kŠC“¹',2),(6,'‹g“c',2,'“Œ‹',1),(7,'ˆÉ“¡',3,'­™“‡',2),
+(8,'R–{',3,'_“Şì',3),(9,'X–{',4,'‰«“ê',4),(10,'‹g‰ª',4,'_“Şì',5);
 
 
---6.studentï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½1
+--6.studentƒe[ƒuƒ‹ŒŸõ-‚»‚Ì1
 select * from student where grade=1;
 
 
---7.studentï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½2
-select * from student where hometown='ï¿½ï¿½ï¿½ï¿½';
+--7.studentƒe[ƒuƒ‹ŒŸõ-‚»‚Ì2
+select * from student where hometown='“Œ‹';
 
 
---8.majorï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+--8.majorƒe[ƒuƒ‹ŒŸõ
 select major_name from major;
 
 
---9.studentï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Ìƒï¿½ï¿½Rï¿½[ï¿½hï¿½Xï¿½V
+--9.studentƒe[ƒuƒ‹‚ÌƒŒƒR[ƒhXV
 update student set grade=3 where student_id=10;
 
 
---10.studentï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Ìƒï¿½ï¿½Rï¿½[ï¿½hï¿½íœ
+--10.studentƒe[ƒuƒ‹‚ÌƒŒƒR[ƒhíœ
 delete from student where student_id=10;
+
+
+--‰‰K–â‘è-SQL1-”­“W
+
+--1.ƒf[ƒ^ƒx[ƒXì¬
+CREATE DATABASE axiz_exam_dev;
+
+
+--2.ƒe[ƒuƒ‹ì¬-‚»‚Ì1
+create table customer (
+customer_id int primary key
+,customer_name varchar(50));
+
+
+--3.ƒe[ƒuƒ‹ì¬-‚»‚Ì2
+create table sales (
+sales_id int primary key
+,order_date date
+,customer_id int not null references customer(customer_id)
+,amount decimal);
+
+
+--4."customer"ƒe[ƒuƒ‹‚Öƒf[ƒ^“o˜^
+insert into customer values (1,'“c’†'),(2,'—é–Ø')
+,(3,'“c’†'),(4,'“c“‡');
+
+
+--5."sales"ƒe[ƒuƒ‹‚Öƒf[ƒ^“o˜^
+insert into sales values (1,'2018-11-01',1,3000),(2,'2018-10-01',3,5000)
+,(3,'2018-10-01',4,6000),(4,'2018-11-02',2,2000),(5,'2018-11-15',2,null);
+
+
+--6.salesƒe[ƒuƒ‹ŒŸõ-‚»‚Ì1
+select * from sales where amount < 5000;
+
+
+--7.salesƒe[ƒuƒ‹ŒŸõ-‚»‚Ì2
+select * from sales where amount >= 5000;
+
+
+--8.salesƒe[ƒuƒ‹ŒŸõ-‚»‚Ì3
+select sales_id,order_date,customer_id,amount*1.1 from sales; 
+
+
+--9.salesƒe[ƒuƒ‹ŒŸõ-‚»‚Ì4
+select * from sales where amount is not null;
+
+
+--10.customerƒe[ƒuƒ‹ŒŸõ-‚»‚Ì1
+select * from customer where customer_name != '“c’†';
+
+
+--11.salesƒe[ƒuƒ‹‚ÌƒŒƒR[ƒhXV
+update sales set order_date='2018-11-05', customer_id=4 where sales_id=4;
+
+
+--12.salesƒe[ƒuƒ‹‚ÌƒŒƒR[ƒhíœ
+delete from sales where amount is null;
