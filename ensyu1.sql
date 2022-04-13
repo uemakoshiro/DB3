@@ -1,16 +1,16 @@
---‰‰K–â‘è-SQL1-Šî–{
+--ï¿½ï¿½ï¿½Kï¿½ï¿½ï¿½-SQL1-ï¿½ï¿½{
 
---1.ƒf[ƒ^ƒx[ƒXì¬
+--1.ï¿½fï¿½[ï¿½^ï¿½xï¿½[ï¿½Xï¿½ì¬
 CREATE DATABASE db_exam;
 
 
---2.ƒe[ƒuƒ‹ì¬-‚»‚Ì1
+--2.ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ì¬-ï¿½ï¿½ï¿½ï¿½1
 create table major (
 major_id int primary key
 ,major_name varchar(50));
 
 
---3.ƒe[ƒuƒ‹ì¬-‚»‚Ì2
+--3.ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ì¬-ï¿½ï¿½ï¿½ï¿½2
 create table student (
 student_id int primary key
 ,student_name varchar(50)
@@ -19,32 +19,32 @@ student_id int primary key
 ,major_id int NOT NULL REFERENCES major(major_id));
 
 
---4."major"ƒe[ƒuƒ‹‚Öƒf[ƒ^“o˜^
-insert into major values (1,'‰p•¶Šw'),(2,'‰—p‰ÈŠw')
-,(3,'î•ñHŠw'),(4,'ŒoÏŠw'),(5,'‘Û•¶‰»');
+--4."major"ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Öƒfï¿½[ï¿½^ï¿½oï¿½^
+insert into major values (1,'ï¿½pï¿½ï¿½ï¿½w'),(2,'ï¿½ï¿½ï¿½pï¿½ÈŠw')
+,(3,'ï¿½ï¿½ï¿½Hï¿½w'),(4,'ï¿½oï¿½ÏŠw'),(5,'ï¿½ï¿½ï¿½Û•ï¿½ï¿½ï¿½');
 
 
---5."student"ƒe[ƒuƒ‹‚Öƒf[ƒ^“o˜^
-insert into student values (1,'R“c',1,'‹{é',1),(2,'“c’†',1,'“Œ‹',2),(3,'²“¡',1,'“Œ‹',3),
-(4,'—é–Ø',2,'­™“‡',1),(5,'‚‹´',2,'–kŠC“¹',2),(6,'‹g“c',2,'“Œ‹',1),(7,'ˆÉ“¡',3,'­™“‡',2),
-(8,'R–{',3,'_“Şì',3),(9,'X–{',4,'‰«“ê',4),(10,'‹g‰ª',4,'_“Şì',5);
+--5."student"ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Öƒfï¿½[ï¿½^ï¿½oï¿½^
+insert into student values (1,'ï¿½Rï¿½c',1,'ï¿½{ï¿½ï¿½',1),(2,'ï¿½cï¿½ï¿½',1,'ï¿½ï¿½ï¿½ï¿½',2),(3,'ï¿½ï¿½ï¿½ï¿½',1,'ï¿½ï¿½ï¿½ï¿½',3),
+(4,'ï¿½ï¿½ï¿½',2,'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',1),(5,'ï¿½ï¿½ï¿½ï¿½',2,'ï¿½kï¿½Cï¿½ï¿½',2),(6,'ï¿½gï¿½c',2,'ï¿½ï¿½ï¿½ï¿½',1),(7,'ï¿½É“ï¿½',3,'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',2),
+(8,'ï¿½Rï¿½{',3,'ï¿½_ï¿½Şï¿½',3),(9,'ï¿½Xï¿½{',4,'ï¿½ï¿½ï¿½ï¿½',4),(10,'ï¿½gï¿½ï¿½',4,'ï¿½_ï¿½Şï¿½',5);
 
 
---6.studentƒe[ƒuƒ‹ŒŸõ-‚»‚Ì1
+--6.studentï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½1
 select * from student where grade=1;
 
 
---7.studentƒe[ƒuƒ‹ŒŸõ-‚»‚Ì2
-select * from student where hometown='“Œ‹';
+--7.studentï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½2
+select * from student where hometown='ï¿½ï¿½ï¿½ï¿½';
 
 
---8.majorƒe[ƒuƒ‹ŒŸõ
+--8.majorï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 select major_name from major;
 
 
---9.studentƒe[ƒuƒ‹‚ÌƒŒƒR[ƒhXV
+--9.studentï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Ìƒï¿½ï¿½Rï¿½[ï¿½hï¿½Xï¿½V
 update student set grade=3 where student_id=10;
 
 
---10.studentƒe[ƒuƒ‹‚ÌƒŒƒR[ƒhíœ
+--10.studentï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Ìƒï¿½ï¿½Rï¿½[ï¿½hï¿½íœ
 delete from student where student_id=10;
