@@ -1,0 +1,22 @@
+--DDL
+
+CREATE DATABASE db_ex3;
+
+CREATE TABLE books(
+書籍ID INT PRIMARY KEY,
+書籍名 VARCHAR(50),
+出版社ID INT,
+定価 DECIMAL,
+発行年月日 date,
+著者ID INT);
+
+CREATE TABLE publisher(
+出版社ID INT PRIMARY KEY,
+出版社名 VARCHAR(50));
+
+CREATE TABLE author(
+著者ID INT PRIMARY KEY,
+著者名 VARCHAR(50));
+
+
+
