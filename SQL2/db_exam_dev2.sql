@@ -70,4 +70,3 @@ WHERE sales_id = (SELECT sales_id
                   ORDER BY amount DESC
                   LIMIT 1);
 
-
